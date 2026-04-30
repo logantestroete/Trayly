@@ -1,9 +1,10 @@
+import Header from "../components/Header";
 
 function HomePage() {
     return (
-        <>
-            <p>This is the home page!</p>
-        </>
+        <div className="max-w-[1280px] flex justify-center mx-auto">
+            <Header />
+        </div>
     )
 }
 

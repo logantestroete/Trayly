@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 
 
-function SurgeryInfoPage() {
+function NotesPage() {
     return (
         <div className="max-w-[1280px] flex justify-center mx-auto">
             <Header />
@@ -9,4 +9,4 @@ function SurgeryInfoPage() {
     )
 }
 
-export default SurgeryInfoPage;
+export default NotesPage;

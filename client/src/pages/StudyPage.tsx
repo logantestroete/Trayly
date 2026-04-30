@@ -1,10 +1,11 @@
+import Header from "../components/Header";
 
 
 function StudyPage() {
     return (
-        <>
-            <p>This is the study page!</p>
-        </>
+        <div className="max-w-[1280px] flex justify-center mx-auto">
+            <Header />
+        </div>
     )
 }
 
