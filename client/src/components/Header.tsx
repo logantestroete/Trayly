@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 function Header() {
     return (
-        <div className="w-full mx-auto py-2">
+        <div className="w-full mx-auto py-2 px-2">
             <div className="flex justify-between px-1 items-center border-b border-gray-300 pb-2">
                 <div className="flex w-[50%] md:w-[75%] items-center h-auto">
                     <div className="text-3xl font-bold mr-3">Trayly</div>
