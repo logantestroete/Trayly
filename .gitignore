@@ -45,3 +45,4 @@ obj/
 
 # OS
 .DS_Store
+.fake

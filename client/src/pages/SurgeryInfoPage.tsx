@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import SearchIcon from "../assets/search_icon.svg"
 import SurgeryInfoHero from "../components/SurgeryInfo/SurgeryInfoHero";
+import SurgeryInfoContent from "../components/SurgeryInfo/SurgeryInfoContent";
 
 function SurgeryInfoPage() {
     return (
@@ -16,6 +17,7 @@ function SurgeryInfoPage() {
                 
             </div>
             <SurgeryInfoHero />
+            <SurgeryInfoContent />
         </div>
     )
 }

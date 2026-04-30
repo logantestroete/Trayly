@@ -5,6 +5,30 @@
   font-family: "Inter", sans-serif
 }
 
+.si-tab {
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+}
+
+.si-tab:hover {
+  cursor: pointer;
+}
+
+.si-tab-active {
+  border-bottom: 2px solid;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 @theme {
   --breakpoint-hd: 780px;
   --breakpoint-xs: 375px;

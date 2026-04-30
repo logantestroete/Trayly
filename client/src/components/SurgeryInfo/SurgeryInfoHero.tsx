@@ -9,7 +9,7 @@ function SurgeryInfoHero() {
                 <SurgeryInfoHeroOverview />
                 <SurgeryInfoHeroStepsTools stepCount="12" topTools={tools}/>
             </div>
-            <img src="" alt="" className="w-full lg:w-[80%] h-[200px] lg:h-[400px] mx-auto bg-gray-500 rounded"/>
+            <img src="" alt="" className="w-full lg:w-[80%] h-[150px] lg:h-[300px] mx-auto bg-gray-500 rounded"/>
         </div>
     );
 }
