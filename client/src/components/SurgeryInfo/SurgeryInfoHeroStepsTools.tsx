@@ -1,36 +1,92 @@
 import StepsIcon from "../../assets/steps_icon.svg"
+import { Card } from "../Card"
 
 type StepsToolsProps = {
     stepCount: string;
     topTools: string[]
 }
 
-function SurgeryInfoHeroStepsTools({stepCount, topTools}: StepsToolsProps) {
+const iconBase =
+    "shrink-0 rounded-full bg-slate-100 p-1";
+
+const statIcon =
+    `${iconBase}hd:block size-[clamp(5rem,8vw,8rem)] lg:size-[clamp(4rem,6vw,6rem)]`;
+
+const toolIcon =
+    `${iconBase} size-[clamp(2.5rem,5vw,4rem)]`;
+
+const panelPadding =
+    "py-[clamp(0.75rem,2vw,1.25rem)]";
+
+const titleText =
+    "text-[clamp(0.9rem,1.5vw,1.1rem)] font-semibold";
+
+const stepNumber =
+    "my-2 w-full text-center text-[clamp(3.5rem,10vw,6rem)] leading-none";
+
+const toolText =
+    "text-[clamp(0.875rem,1.5vw,1.125rem)]";
+
+function SurgeryInfoHeroStepsTools({ stepCount, topTools }: StepsToolsProps) {
     return (
-        <div className="border border-gray-300 rounded lg:px-6 lg:py-2 w-full lg:w-[45%] mx-auto flex items-center my-2 lg:mt-0 lg:h-[350px]">
-            <div className="border-r border-gray-300 w-[45%] lg:w-[30%] flex lg:flex-col justify-around items-center py-5">
-                <img src={StepsIcon} alt="" className="hidden hd:block hd:size-[8rem] lg:size-[6rem] bg-slate-100 rounded-full p-1"/>
-                <div className="flex flex-col items-center mt-2">
-                    <p className="">Steps</p>
-                    <div className="text-8xl lg:text-5xl my-2 text-center w-full">{stepCount}</div>
-                    <p className="text-center">Total Steps</p>
+        <Card className="lg:ml-2 flex w-full">
+            <div className="grid grid-cols-[minmax(8rem,0.9fr)_1.1fr] lg:grid-cols-[0.8fr_1.2fr] w-full">
+                <div
+                    className={`
+                        ${panelPadding}
+                        flex flex-col items-center justify-center gap-[clamp(0.75rem,2vw,1.5rem)]
+                        border-r border-gray-300
+                    `}
+                >
+                    <img
+                        src={StepsIcon}
+                        alt=""
+                        className={statIcon}
+                    />
+
+                    <div className="flex flex-col items-center">
+                        <p className={titleText}>Steps</p>
+                        <div className={stepNumber}>{stepCount}</div>
+                        <p className="text-center text-sm text-gray-600">Total Steps</p>
+                    </div>
                 </div>
-            </div>
-            <div className="w-[45%] lg:w-[60%] mx-auto flex flex-col justify-around md:justify-start items-start h-full py-1 md:py-5">
-                <div className="text-center w-full font-semibold">Top Tools</div>
-                <div className="w-full lg:ml-[5%] my-1 flex flex-col items-start">
-                    {topTools.map((tool: string) => {
-                        return (
-                            <div className="flex my-2 items-center justify-start w-full" id={tool}>
-                                <img src={StepsIcon} alt="" className=" hd:size-[4rem] lg:size-[3rem] bg-slate-100 rounded-full mx-auto mr-5 p-1 my-auto"/>
-                                <div className="text-sm hd:text-lg w-full">{tool}</div>
+
+                <div
+                    className={`
+                        ${panelPadding}
+                        flex min-w-0 flex-col justify-center items-start gap-[clamp(0.75rem,2vw,1.25rem)]
+                        px-[clamp(0.75rem,2vw,1.5rem)]
+                    `}
+                >
+                    <div className={`w-full text-center ${titleText}`}>
+                        Top Tools
+                    </div>
+
+                    <div className="flex w-full flex-col gap-[clamp(0.5rem,1.5vw,0.875rem)] px-[clamp(0rem,5vw,5.5rem)]">
+                        {topTools.map((tool: string) => (
+                            <div
+                                key={tool}
+                                className="flex w-full items-center gap-[clamp(0.75rem,2vw,1.25rem)]"
+                            >
+                                <img
+                                    src={StepsIcon}
+                                    alt=""
+                                    className={toolIcon}
+                                />
+
+                                <div className={`${toolText} min-w-0`}>
+                                    {tool}
+                                </div>
                             </div>
-                        )
-                    })}
+                        ))}
+                    </div>
+
+                    <button className="mx-auto w-full max-w-xs rounded border border-gray-300 px-6 py-2 text-[clamp(0.875rem,1.5vw,1rem)]">
+                        View All Tools
+                    </button>
                 </div>
-                <button className=" text-sm lg:text-base lg:w-[80%] py-2 lg:py-1 px-8 mx-auto border border-gray-300 rounded lg:mt-5">View All Tools</button>
             </div>
-        </div>
+        </Card>
     )
 }
 
