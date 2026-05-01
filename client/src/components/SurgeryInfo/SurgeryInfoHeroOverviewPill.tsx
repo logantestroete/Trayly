@@ -1,4 +1,4 @@
-import { textStyles, spacing } from "../../utilities/responsiveClasses";
+import { textStyles } from "../../utilities/responsiveClasses";
 
 type InfoPillProps = {
   name: string;
