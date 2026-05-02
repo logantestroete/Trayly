@@ -1,5 +1,6 @@
 import { Card } from "./Card";
 import { textStyles } from "../utilities/responsiveClasses";
+import { useState } from 'react'
 
 type DescriptionCardProps = {
     title: string;
@@ -8,16 +9,16 @@ type DescriptionCardProps = {
 }
 
 
-function DescriptionCard({Icon, title, description}: DescriptionCardProps) {
+function DescriptionCard({ Icon, title, description }: DescriptionCardProps) {
+    const [active, setActive] = useState(false);
+
     return (
-        <Card className="grid grid-cols-[0.3fr_1.7fr] place-items-start">
-            <span className="mr-[clamp(0.25rem,1rem,1.5rem)]">
-                <Icon className={`size-[clamp(3.5em,6vw,5rem)] p-[0.5rem] bg-slate-200 rounded`}/>
-            </span>
-            <div>
+        <Card className="flex flex-col">
+            <button className="flex btn" onClick={() => {setActive(!active)}}>
+                <Icon className={`size-[clamp(2rem,4vw,3rem)] mr-[clamp(0.25rem,1rem,1.5rem)]  p-[0.5rem] bg-slate-200 rounded`} />
                 <h3 className={`${textStyles.sectionTitle} mb-2`}>{title}</h3>
-                <p className={`${textStyles.body} text-gray-600`}>{description}</p>
-            </div>
+            </button>
+            <p className={`${textStyles.body} ${(active) ? "" : "hidden"} mt-2 text-gray-600 ml-[clamp(0.5rem,1rem,2rem)]`}>{description}</p>
         </Card>
     )
 }

@@ -5,6 +5,10 @@
   font-family: "Inter", sans-serif
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 .si-tab {
   font-weight: 600;
   border: none;

@@ -10,13 +10,13 @@ export const spacing = {
 
 export const textStyles = {
   pageTitle: "text-[clamp(1.75rem,4vw,3rem)] font-bold tracking-tight",
-  sectionTitle: "text-[clamp(1.25rem,2.5vw,2rem)] font-semibold",
+  sectionTitle: "text-[clamp(1.25rem,2vw,2rem)] font-semibold",
   body: "text-[clamp(0.95rem,1.4vw,1.05rem)] leading-relaxed",
   small: "text-sm",
 };
 
 export const iconSizes = {
-    sm: "text-[clamp(0.875rem,1.5vw,1rem)]",
-    md: "text-[clamp(1rem,2vw,1.25rem)]",
-    lg: "text-[clamp(1.25rem,2.5vw,1.75rem)]",
+    sm: "size-[clamp(0.875rem,1.5vw,1rem)]",
+    md: "size-[clamp(1rem,2vw,1.25rem)]",
+    lg: "size-[clamp(1.25rem,2vw,1.75rem)]",
 };

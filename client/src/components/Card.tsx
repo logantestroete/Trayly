@@ -9,7 +9,7 @@ export function Card({ children, className }: CardProps) {
       className={`
         rounded-2xl
         border border-gray-300
-        p-[clamp(1rem,2vw,1.5rem)]
+        p-[clamp(1rem,1.5vw,1.5rem)]
         ${className}
       `}
     >

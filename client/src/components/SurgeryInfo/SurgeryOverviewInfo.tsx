@@ -22,7 +22,7 @@ function SurgeryOverviewInfo() {
                 <DescriptionCard Icon={SummaryIcon} title="Summary" description={summaryDes} />
                 <DescriptionCard Icon={SummaryIcon} title="Purpose" description={purposeDes} />
             </div>
-
+            
             {/* Procedure Summary Section */}
             <Card className="mb-2">
                 <div className="flex mb-[clamp(2rem,2vh,3rem)]">
