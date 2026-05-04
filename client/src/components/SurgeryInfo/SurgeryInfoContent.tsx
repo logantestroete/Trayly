@@ -14,7 +14,7 @@ function SurgeryInfoContent() {
                 <SurgeryInfoContentTab name="Steps"/>
                 <SurgeryInfoContentTab name="Complications"/>
             </div>
-            <div className="h-[600px] overflow-y-scroll scroll-smooth no-scrollbar">
+            <div className="h-[1000px] overflow-y-scroll scroll-smooth no-scrollbar">
                 <SurgeryInfoContentBody />
             </div>
         </SurgeryInfoNavProvider>

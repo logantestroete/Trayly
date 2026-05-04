@@ -13,7 +13,7 @@ function DescriptionCard({ Icon, title, description }: DescriptionCardProps) {
     const [active, setActive] = useState(false);
 
     return (
-        <Card className="flex flex-col">
+        <Card className="flex flex-col w-full">
             <button className="flex btn" onClick={() => {setActive(!active)}}>
                 <Icon className={`size-[clamp(2rem,4vw,3rem)] mr-[clamp(0.25rem,1rem,1.5rem)]  p-[0.5rem] bg-slate-200 rounded`} />
                 <h3 className={`${textStyles.sectionTitle} mb-2`}>{title}</h3>

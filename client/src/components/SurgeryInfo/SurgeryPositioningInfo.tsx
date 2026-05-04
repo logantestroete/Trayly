@@ -5,7 +5,7 @@ import DescriptionCard from '../DescriptionCard';
 import IconCategoryListItem from '../IconCategoryListItem';
 import { Card } from '../Card';
 import ListDescriptionCard from '../ListDescriptionCard';
-import TabableIconListItem from '../TabableIconListItem';
+import TabableIconListItem from '../IconListItem';
 import ListViewCard from '../ListViewCard';
 
 function SurgeryPositioningInfo() {
@@ -22,7 +22,13 @@ function SurgeryPositioningInfo() {
     const mistakes = ['Arms abducted too far', 'Pressure points not padded', 'Patient not centered on teh bed', 'Safety strap placed incorrectly', 'Position interfering with surgical access', 'Prep/drape area not considered before final positioning'];
     return (
         <div className="p-[clamp(0.25rem,2vw,1.5rem)]">
-            <div className='grid grid-cols-[2fr] md:grid-cols-[1fr_1fr] gap-[clamp(0.5rem,1rem,2rem)]'>
+                
+            {/* 
+            ============================================================
+                Position Summary and Why This Position Is Used Cards 
+            ============================================================
+            */}
+            <div className='grid grid-cols-[2fr] md:grid-cols-[1fr_1fr] gap-2 place-items-start'>
                 <Card>
                     <button className="flex btn" onClick={() => { setPosIsActive(!posIsActive) }}>
                         <PositioningIcon className={`size-[clamp(2rem,4vw,3rem)] mr-[clamp(0.25rem,1rem,1.5rem)]  p-[0.5rem] bg-slate-200 rounded`} />
@@ -36,7 +42,13 @@ function SurgeryPositioningInfo() {
                 </Card>
                 <DescriptionCard Icon={PositioningIcon} title='Why This Position Is Used' description={lorem} />
             </div>
-            <div className='grid grid-cols-[2fr] md:grid-cols-[1fr_1fr] gap-[clamp(0.5rem,1rem,2rem)] mt-2'>
+
+            {/* 
+            ============================================================
+                Patient Setup and Equipment
+            ============================================================
+            */}
+            <div className='grid grid-cols-[2fr] md:grid-cols-[1fr_1fr] gap-2 mt-2 place-items-start'>
                 <Card>
                     <button className="flex btn" onClick={() => { setSetupIsActive(!setupIsActive) }}>
                         <PositioningIcon className={`size-[clamp(2rem,4vw,3rem)] mr-[clamp(0.25rem,1rem,1.5rem)]  p-[0.5rem] bg-slate-200 rounded`} />
@@ -78,7 +90,7 @@ function SurgeryPositioningInfo() {
                     <TabableIconListItem title='Before Draping' description={lorem} Icon={PositioningIcon} />
                 </div>
             </Card>
-            <Card>
+            <Card className='mt-2'>
                 <button className="flex btn" onClick={() => { setMistakesIsActive(!mistakesIsActive) }}>
                     <PositioningIcon className={`size-[clamp(2rem,4vw,3rem)] mr-[clamp(0.25rem,1rem,1.5rem)]  p-[0.5rem] bg-slate-200 rounded`} />
                     <h3 className={`${textStyles.sectionTitle} mb-2`}>Common Mistake / Safety Notes</h3>

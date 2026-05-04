@@ -4,14 +4,15 @@ import FilledCircle from "../assets/filled_circle_icon.svg?react";
 type ListViewType = {
     className?: string;
     title: string;
+    cols?: string;
     items: string[];
 }
 
-function ListViewCard({className,title,items}: ListViewType) {
+function ListViewCard({className,title,items,cols}: ListViewType) {
     return (
         <div className={`${className}`}>
             <h3 className={`${textStyles.body} font-semibold`}>{title}</h3>
-            <div className="flex flex-col items-start">
+            <div className={`grid grid-cols-${cols ? cols : "1"} place-items-start`}>
                 {items.map((item) => {
                     return (
                         <div className="flex items-center">
